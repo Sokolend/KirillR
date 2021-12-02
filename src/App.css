@@ -1,42 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito&display=swap');
 .App {
-  text-align: center;
+	display: flex;
+	justify-content: center;
+
+	margin-top: 52px;
+}
+body {
+	font-family: Lato-Bold, Arial, sans-serif;
+}
+.card {
+	max-width: 350px;
+	text-align: center;
+	padding-bottom: 40px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.lang {
+	font-size: 16px;
+	font-weight: bold;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 22%;
+
+	cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.lang span {
+	margin-top: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 32px;
+	padding: 0 20px;
+}
+.header img {
+	display: block;
+	height: 24px;
+	overflow: hidden;
+	text-indent: 100%;
+	width: 126px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-inner {
+	background-image: url(/src/card.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 2;
+	flex-direction: column;
+	display: flex;
+	width: 360px;
+	height: 180px;
+	justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-inner h4 {
+	font-size: 20px;
+	line-height: 24px;
+	margin: 0;
+	color: #fff;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+.verified {
+	font-size: 14px;
+	line-height: 20px;
+	color: #0b1f33;
+	margin-top: 12px;
+}
+.verified span {
+	display: inline-block;
+	padding: 6px 32px;
+	background: #fff;
+	border-radius: 16px;
+	font-weight: 400;
+}
+
+.calendar {
+	padding-bottom: 24px;
+	border-bottom: 1px solid #e1e1e1;
+	margin-top: 12px;
+}
+.calendar img {
+	margin-right: 12px;
+}
+
+.calendarcont {
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 0;
+}
+.text {
+	font-size: 14px;
+	line-height: 20px;
+	color: #66727f;
+}
+.first {
+	margin-right: 4px;
+}
+
+.fioWrap {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.mb-4 {
+	margin-bottom: 4px;
+}
+.mr-4 {
+	margin-right: 4px;
+}
+.hide {
+	display: none !important;
+}
+
+.fioWrap div {
+	font-size: 14px;
+	line-height: 24px;
+	margin: 0;
+	text-align: center;
+}
+
+.fioWrap .bold {
+	font-weight: 600;
+}
+
+.button {
+	display: block;
+	border: 2px solid #0d4cd3;
+	border-radius: 8px;
+	padding: 14px 0;
+	text-align: center;
+	text-decoration: none;
+	color: #0d4cd3;
+	margin-top: 24px;
 }

@@ -1,35 +1,145 @@
 import { useState } from 'react'
 import logo from './logo.svg'
+import goslogo from './goslogo.svg'
+import rusflag from './rusflag.svg'
+import cardsvg from './card.svg'
+import calendarLogo from './calendar.svg'
 import './App.css'
 import { Route, Routes } from 'react-router'
 
 function App() {
 	const state = [
 		{
-			name: 'Иванов Иван Иванович',
-			passport: '19 19 191919',
-			birthDate: '18.01.2000',
-			expires: '03.11.2022',
-			number: '1000 1978 1475 6203',
+			name: 'Р**** К***** О*******',
+			passport: '19** ***519',
+			birthDate: '30.08.2000',
+			expires: '12.11.2022',
+			number: '1000 1978 2764 8905',
 		},
 		{
-			name: 'Сергеев Сергей Сергеевич',
-			passport: '19 19 191919',
-			birthDate: '18.01.2000',
-			expires: '03.11.2022',
-			number: '1000 1978 1475 6203',
+			name: 'Р**** К***** О*******',
+			passport: '19** ***313',
+			birthDate: '20.03.2000',
+			expires: '08.11.2022',
+			number: '1000 1978 5834 6954',
 		},
 	]
 
 	const nameElement1 = (
-		<>
-			<h2>{state[0].name}</h2>
-		</>
+		<div className='card'>
+			<div className='header'>
+				<img src={goslogo} />
+				<div className='lang'>
+					<img src={rusflag} />
+					<span>RUS</span>
+				</div>
+			</div>
+
+			<div class='card-inner'>
+				<h4 class='title-h4 white status-title main-title'>
+					Сертификат COVID-19
+				</h4>
+				<div class='verified'>
+					<span>Действителен</span>
+				</div>
+				<h4 style={{ marginTop: '12px' }}>
+					<span class='num-symbol'>№</span>{' '}
+					<span class='unrz'>{state[0].number}</span>
+				</h4>
+			</div>
+
+			<div class='calendar'>
+				<div class='calendarcont'>
+					<img src={calendarLogo} />
+					<div class='text first'>Действует до: </div>
+					<div class='text'>{state[0].expires}</div>
+				</div>
+			</div>
+			<div style={{ marginTop: '24px' }}>
+				<div class='mb-4 fioWrap'>
+					<div class='small-text mb-4 mr-4 attr-title hide'>
+						ФИО:{' '}
+					</div>
+					<div class='bold'>{state[0].name}</div>
+				</div>
+				<div class='mb-4 fioWrap'>
+					<div class='mb-4 mr-4 '>Дата рождения: </div>
+					<div class='text'>{state[0].birthDate}</div>
+				</div>
+				<div class='mb-4 fioWrap'>
+					<div class='small-text mb-4 mr-4 attr-title'>Паспорт: </div>
+					<div class='text'>{state[0].passport}</div>
+				</div>
+			</div>
+			<div class='mt-24'>
+				<a href='' class='button close'>
+					Закрыть
+				</a>{' '}
+				<a
+					download=''
+					rel='noopener'
+					target='_blank'
+					class='button download hide'></a>
+			</div>
+		</div>
 	)
 	const nameElement2 = (
-		<>
-			<h2>{state[1].name}</h2>
-		</>
+		<div className='card'>
+			<div className='header'>
+				<img src={goslogo} />
+				<div className='lang'>
+					<img src={rusflag} />
+					<span>RUS</span>
+				</div>
+			</div>
+
+			<div class='card-inner'>
+				<h4 class='title-h4 white status-title main-title'>
+					Сертификат COVID-19
+				</h4>
+				<div class='verified'>
+					<span>Действителен</span>
+				</div>
+				<h4 style={{ marginTop: '12px' }}>
+					<span class='num-symbol'>№</span>{' '}
+					<span class='unrz'>{state[1].number}</span>
+				</h4>
+			</div>
+
+			<div class='calendar'>
+				<div class='calendarcont'>
+					<img src={calendarLogo} />
+					<div class='text first'>Действует до: </div>
+					<div class='text'>{state[1].expires}</div>
+				</div>
+			</div>
+			<div style={{ marginTop: '24px' }}>
+				<div class='mb-4 fioWrap'>
+					<div class='small-text mb-4 mr-4 attr-title hide'>
+						ФИО:{' '}
+					</div>
+					<div class='bold'>{state[1].name}</div>
+				</div>
+				<div class='mb-4 fioWrap'>
+					<div class='mb-4 mr-4 '>Дата рождения: </div>
+					<div class='text'>{state[1].birthDate}</div>
+				</div>
+				<div class='mb-4 fioWrap'>
+					<div class='small-text mb-4 mr-4 attr-title'>Паспорт: </div>
+					<div class='text'>{state[1].passport}</div>
+				</div>
+			</div>
+			<div class='mt-24'>
+				<a href='' class='button close'>
+					Закрыть
+				</a>{' '}
+				<a
+					download=''
+					rel='noopener'
+					target='_blank'
+					class='button download hide'></a>
+			</div>
+		</div>
 	)
 
 	return (
