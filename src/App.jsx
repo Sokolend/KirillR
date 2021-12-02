@@ -12,7 +12,7 @@ function App() {
 		{
 			name: 'Р**** К***** О*******',
 			passport: '19** ***519',
-			birthDate: '30.08.2000',
+			birthDate: '30.08.2002',
 			expires: '12.11.2022',
 			number: '1000 1978 2764 8905',
 		},
@@ -40,10 +40,10 @@ function App() {
 					Сертификат COVID-19
 				</h4>
 				<div class='verified'>
-					<span>Действителен</span>
+					<span>Действителен </span>
 				</div>
 				<h4 style={{ marginTop: '12px' }}>
-					<span class='num-symbol'>№</span>{' '}
+					<span class='num-symbol'>№</span>
 					<span class='unrz'>{state[0].number}</span>
 				</h4>
 			</div>
@@ -51,86 +51,34 @@ function App() {
 			<div class='calendar'>
 				<div class='calendarcont'>
 					<img src={calendarLogo} />
-					<div class='text first'>Действует до: </div>
-					<div class='text'>{state[0].expires}</div>
+					<div class='text first bold'>Действует до: </div>
+					<div class='text bold'>{state[0].expires}</div>
 				</div>
 			</div>
 			<div style={{ marginTop: '24px' }}>
-				<div class='mb-4 fioWrap'>
+				<div class='mb-4 fioWrap bold '>
 					<div class='small-text mb-4 mr-4 attr-title hide'>
 						ФИО:{' '}
 					</div>
-					<div class='bold'>{state[0].name}</div>
+					<div class='bold correctFontSize'>{state[0].name}</div>
 				</div>
 				<div class='mb-4 fioWrap'>
-					<div class='mb-4 mr-4 '>Дата рождения: </div>
-					<div class='text'>{state[0].birthDate}</div>
-				</div>
-				<div class='mb-4 fioWrap'>
-					<div class='small-text mb-4 mr-4 attr-title'>Паспорт: </div>
-					<div class='text'>{state[0].passport}</div>
-				</div>
-			</div>
-			<div class='mt-24'>
-				<a href='' class='button close'>
-					Закрыть
-				</a>{' '}
-				<a
-					download=''
-					rel='noopener'
-					target='_blank'
-					class='button download hide'></a>
-			</div>
-		</div>
-	)
-	const nameElement2 = (
-		<div className='card'>
-			<div className='header'>
-				<img src={goslogo} />
-				<div className='lang'>
-					<img src={rusflag} />
-					<span>RUS</span>
-				</div>
-			</div>
-
-			<div class='card-inner'>
-				<h4 class='title-h4 white status-title main-title'>
-					Сертификат COVID-19
-				</h4>
-				<div class='verified'>
-					<span>Действителен</span>
-				</div>
-				<h4 style={{ marginTop: '12px' }}>
-					<span class='num-symbol'>№</span>{' '}
-					<span class='unrz'>{state[1].number}</span>
-				</h4>
-			</div>
-
-			<div class='calendar'>
-				<div class='calendarcont'>
-					<img src={calendarLogo} />
-					<div class='text first'>Действует до: </div>
-					<div class='text'>{state[1].expires}</div>
-				</div>
-			</div>
-			<div style={{ marginTop: '24px' }}>
-				<div class='mb-4 fioWrap'>
-					<div class='small-text mb-4 mr-4 attr-title hide'>
-						ФИО:{' '}
+					<div class='mb-4 mr-4 bold'>Дата рождения: </div>
+					<div style={{ marginLeft: '2px' }} class='text bold'>
+						{state[0].birthDate}
 					</div>
-					<div class='bold'>{state[1].name}</div>
 				</div>
 				<div class='mb-4 fioWrap'>
-					<div class='mb-4 mr-4 '>Дата рождения: </div>
-					<div class='text'>{state[1].birthDate}</div>
-				</div>
-				<div class='mb-4 fioWrap'>
-					<div class='small-text mb-4 mr-4 attr-title'>Паспорт: </div>
-					<div class='text'>{state[1].passport}</div>
+					<div class='small-text mb-4 mr-4 attr-title bold'>
+						Паспорт:
+					</div>
+					<div style={{ marginLeft: '2px' }} class='text bold'>
+						{state[0].passport}
+					</div>
 				</div>
 			</div>
 			<div class='mt-24'>
-				<a href='' class='button close'>
+				<a href='https://www.gosuslugi.ru/' class='button close'>
 					Закрыть
 				</a>{' '}
 				<a
@@ -146,7 +94,6 @@ function App() {
 		<div className='App'>
 			<Routes>
 				<Route path='/1' element={nameElement1} />
-				<Route path='/2' element={nameElement2} />
 			</Routes>
 		</div>
 	)
